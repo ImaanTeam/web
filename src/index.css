@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: 1228px;
+  margin: 0 auto;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.dark {
+  background-color: black !important;
+  color: white !important;
+}
+
+.fa-brands {
+  color: #fff;
+}
+.footer-icons {
+  display: flex;
+  justify-content: end;
+}
+
+.Trivia .loading-container {
+  /* Existing styles */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.Trivia .loading-container > * {
+  /* Target all child elements */
+  order: 1; /* Set default order for all children */
+}
+
+.Trivia .loading-container > .black-overlay {
+  /* Lower order for overlay */
+  order: 0; /* Ensure overlay renders behind the spinner */
+}
+.black-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.7; /* Adjust opacity for desired transparency */
+  z-index: 10; /* Ensure the overlay is above other elements */
+}
